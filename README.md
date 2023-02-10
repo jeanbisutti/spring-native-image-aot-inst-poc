@@ -22,5 +22,5 @@ Finally, transform the jar containing the Spring AOT processing and the AOT inst
 
 `pack build --builder paketobuildpacks/builder:tiny --path target/spring-boot-3-app-instrumented.jar --env BP_NATIVE_IMAGE=true image-native-aot`
 
-It will fail with the unlinkat `/workspace/META-INF/maven:` permission denied error. To do to make it works: add the `drwxr-xr-x` Unix file attribute for JAR directories and `-rw-r--r--`  for the JAR files.
+It will fail with the `unlinkat /workspace/META-INF/maven:` permission denied error. To do to make it works: add the `drwxr-xr-x` Unix file attribute for JAR directories and `-rw-r--r--`  for the JAR files.
 
