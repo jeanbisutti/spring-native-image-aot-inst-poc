@@ -18,9 +18,9 @@ You can give any agent as a parameter of `AotInstrumentation` constructor, whate
 1) The input jar classes are loaded (see `InstrumentedJarDumper.java` and `AotInstrumentation.java` for the definition of the classpath).
 2) A Java agent runs after the Java agent given as a parameter of `AotInstrumentation` constructor and intercepts the instrumented classes (see `JavaClassInterceptorAgent.java`).
 3) The content of the input JAR with the instrumented classes are saved on disk (see `InstrumentedJarDumper.java`).
-4) Some Java agent classes are added (see `AotInstrumentation.java`). T
+4) Some Java agent classes are added (see `AotInstrumentation.java`).
 
-A Spring Boot executable JAR, the included JAR are also instrumented.
+For a Spring Boot executable JAR, the included JARs are also instrumented.
 
 ## Limitations
 
