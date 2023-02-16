@@ -1,6 +1,6 @@
 # Spring native & AOT instrumentation (POC)
 
-The goal of this project is to try to add ahead-of-time (AOT) instrumentation to a Spring native image.
+The goal of this project is to try to add [ahead-of-time (AOT) instrumentation](https://github.com/jeanbisutti/spring-native-image-aot-inst-poc/tree/master/aot-instrumentation) to a Spring native image.
 
 ## To test this project
 
