@@ -13,6 +13,7 @@
         <module>aot-instrumentation</module>
         <module>spring-boot-app-demo</module>
         <module>java-agent</module>
+        <module>otel-programmatic-instrumentation</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

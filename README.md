@@ -2,6 +2,8 @@
 
 The goal of this project is to try to add [ahead-of-time (AOT) instrumentation](https://github.com/jeanbisutti/spring-native-image-aot-inst-poc/tree/master/aot-instrumentation) to a Spring native image.
 
+An alternative approach with programmatic instrumentation is available [here](./otel-programmatic-instrumentation).
+
 ## To test this project
 
 We are going to apply the following transformations:

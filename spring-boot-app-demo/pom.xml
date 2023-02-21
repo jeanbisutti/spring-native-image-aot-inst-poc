@@ -11,8 +11,8 @@
         <version>3.0.2</version>
     </parent>
 
+    <groupId>org.example</groupId>
     <artifactId>spring-boot3-app</artifactId>
-
     <version>1.0-SNAPSHOT</version>
 
     <properties>
