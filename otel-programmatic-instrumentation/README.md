@@ -17,4 +17,4 @@ If you would like to try the used configuration in another SPring Boot 3 project
 * Configure [OpenTelemetry JDBC](https://github.com/open-telemetry/opentelemetry-java-instrumentation/tree/main/instrumentation/jdbc/library)
 * Add [this native-image.properties file](./src/main/resources/META-INF/native-image/native-image.properties) in the `resources/META-INF/native.image` folder
 
-_An issue has to be fixed today about the telemetry data export with GraalVM native images._
+_[An issue has to be fixed today about the telemetry data export with GraalVM native images](https://github.com/Azure/azure-sdk-for-java/issues/33646)._
