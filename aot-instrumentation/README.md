@@ -1,6 +1,6 @@
 # Ahead-of-time (AOT) instrumentation
 
-## Use case 
+## Purpose
 
 Apply the instrumentation written for a Java agent but at build time (ahead-of-time).
 
@@ -28,4 +28,9 @@ The presented mechanism provides ahead-of-time instrumentation to a JAR containi
 However, this library does not instrument the JDK  classes, such as the ForkJoinPool. This can potentially breaks the OpenTelemetry context's propagation for asynchronous calls.
 
 NB: We could add a feature to this AOT instrumentation component to save instrumented JDK classes and use after -Xbootclasspath/p or --patch-module java.desktop. However, this would not work for GraalVM.
+
+## Troubleshooting
+
+[diffoscope](https://diffoscope.org/) is a great tool to compare instrumented and non-instrumented JARs.
+
 
