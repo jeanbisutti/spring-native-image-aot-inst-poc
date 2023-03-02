@@ -19,5 +19,10 @@ public class PlayerController {
         return playerRepository.findAll();
     }
 
+    @GetMapping("/exception")
+    String exception() {
+        throw new RuntimeException();
+    }
+
 
 }

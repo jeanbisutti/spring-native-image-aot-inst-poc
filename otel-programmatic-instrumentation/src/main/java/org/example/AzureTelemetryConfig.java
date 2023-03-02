@@ -1,10 +1,12 @@
 package org.example;
 
 import com.azure.monitor.opentelemetry.exporter.AzureMonitorExporterBuilder;
-import com.azure.monitor.opentelemetry.exporter.implementation.models.ContextTagKeys;
+import io.opentelemetry.api.logs.GlobalLoggerProvider;
 import io.opentelemetry.instrumentation.spring.autoconfigure.EnableOpenTelemetry;
 import io.opentelemetry.sdk.OpenTelemetrySdk;
+import io.opentelemetry.sdk.logs.SdkLoggerProvider;
 import io.opentelemetry.sdk.logs.export.LogRecordExporter;
+import io.opentelemetry.sdk.logs.export.SimpleLogRecordProcessor;
 import io.opentelemetry.sdk.metrics.export.MetricExporter;
 import io.opentelemetry.sdk.trace.SdkTracerProvider;
 import io.opentelemetry.sdk.trace.export.SimpleSpanProcessor;
@@ -21,13 +23,11 @@ public class AzureTelemetryConfig {
     private final AzureMonitorExporterBuilder azureMonitorExporterBuilder;
 
     public AzureTelemetryConfig() {
-        ContextTagKeys aiInternalSdkVersion = ContextTagKeys.AI_INTERNAL_SDK_VERSION;
-        System.out.println("aiInternalSdkVersion = " + aiInternalSdkVersion);
         String connectionString = "YOUR_CONNECTION_STRING";
         this.azureMonitorExporterBuilder = new AzureMonitorExporterBuilder().connectionString(connectionString);
     }
 
-   @Bean
+    @Bean
     public MetricExporter metricExporter() {
         return azureMonitorExporterBuilder.buildMetricExporter();
     }
@@ -40,6 +40,17 @@ public class AzureTelemetryConfig {
     @Bean
     public LogRecordExporter logRecordExporter() {
         return azureMonitorExporterBuilder.buildLogRecordExporter();
+    }
+
+
+    @Bean
+    public Void initOTelLogger(LogRecordExporter logRecordExporter) {
+        SdkLoggerProvider loggerProvider =
+                SdkLoggerProvider.builder()
+                        .addLogRecordProcessor(SimpleLogRecordProcessor.create(logRecordExporter))
+                        .build();
+        GlobalLoggerProvider.set(loggerProvider);
+        return null;
     }
 
     @Bean
