@@ -75,6 +75,11 @@
             <version>1.23.0-alpha</version>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>io.opentelemetry.instrumentation</groupId>
+            <artifactId>opentelemetry-runtime-metrics</artifactId>
+            <version>1.23.0-alpha</version>
+        </dependency>
         <!-- End of OTel dependencies -->
 
         <dependency>

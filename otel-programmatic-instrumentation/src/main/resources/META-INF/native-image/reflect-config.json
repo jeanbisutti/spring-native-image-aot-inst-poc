@@ -21,8 +21,7 @@
   },
   {
     "name": "com.azure.monitor.opentelemetry.exporter.implementation.models.ContextTagKeys",
-    "allDeclaredMethods": true,
-    "allDeclaredFields": true
+    "allDeclaredConstructors": true
   },
   {
     "name": "com.azure.monitor.opentelemetry.exporter.implementation.models.DataPointType",
@@ -86,7 +85,7 @@
   },
   {
     "name": "com.azure.monitor.opentelemetry.exporter.implementation.models.SeverityLevel",
-    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true,
     "allDeclaredFields": true
   },
   {

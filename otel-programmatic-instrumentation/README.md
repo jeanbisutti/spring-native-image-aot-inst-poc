@@ -5,6 +5,12 @@ To get instrumentation with Spring native images, the following components could
 * [Programmatic instrumentation libraries](https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/main/docs/supported-libraries.md#libraries--frameworks)
 * [Azure Monitor OTel exporter](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/monitor/azure-monitor-opentelemetry-exporter)
 
+This project allows having telemetry data with Spring native images on azure for:
+* HTTP requests
+* SQL requests
+* Logback logs
+* JVM metrics
+
 Execute the following command lines to try this project:
 
 `mvn -Pnative spring-boot:build-image`
