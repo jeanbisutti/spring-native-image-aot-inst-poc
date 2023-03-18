@@ -32,12 +32,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
 
         <dependency>
-            <groupId>org.jeanbisutti</groupId>
+            <groupId>com.github.jeanbisutti</groupId>
             <artifactId>applicationinsights-spring-native</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>main-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.opentelemetry.instrumentation</groupId>
